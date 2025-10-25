@@ -1,16 +1,4 @@
-<?php
 
-$pages = [
-    'home' => 'Sākums',
-    'about' => 'Lineārais algoritms',
-    'contact' => 'Lineārais alogoritms ar barjeru'
-];
-
-
-$currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
-    ? $_GET['page']
-    : 'home';
-?>
 
 <!DOCTYPE html>
 <html lang="lv">
@@ -25,7 +13,19 @@ $currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
     </style>
 </head>
 <body>
+<?php
 
+$pages = [
+    'home' => 'Sākums',
+    'about' => 'Lineārais algoritms',
+    'contact' => 'Lineārais alogoritms ar barjeru'
+];
+
+
+$currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
+    ? $_GET['page']
+    : 'home';
+?>
 <!-- Navigācija -->
 <nav>
     <ul>
@@ -64,4 +64,5 @@ $currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
 	<body>
 
 </html>
+
 
