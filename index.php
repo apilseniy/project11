@@ -1,13 +1,12 @@
 <?php
 
-// Definējam pieejamās lapas
 $pages = [
     'home' => 'Sākums',
     'about' => 'Lineārais algoritms',
     'contact' => 'Lineārais alogoritms ar barjeru'
 ];
 
-// Iegūstam aktīvo lapu no URL
+
 $currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
     ? $_GET['page']
     : 'home';
@@ -65,3 +64,4 @@ $currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
 	<body>
 
 </html>
+
