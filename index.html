@@ -1,18 +1,3 @@
-<?php
-
-// Definējam pieejamās lapas
-$pages = [
-    'home' => 'Sākums',
-    'about' => 'Lineārais algoritms',
-    'contact' => 'Lineārais alogoritms ar barjeru'
-];
-
-// Iegūstam aktīvo lapu no URL
-$currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
-    ? $_GET['page']
-    : 'home';
-?>
-
 <!DOCTYPE html>
 <html lang="lv">
 <head>
@@ -26,8 +11,19 @@ $currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
     </style>
 </head>
 <body>
+<?php
+$pages = [
+    'home' => 'Sākums',
+    'about' => 'Lineārais algoritms',
+    'contact' => 'Lineārais alogoritms ar barjeru'
+];
 
-<!-- Navigācija -->
+// Iegūstam aktīvo lapu no URL
+$currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
+    ? $_GET['page']
+    : 'home';
+?>
+
 <nav>
     <ul>
         <?php foreach ($pages as $key => $label): ?>
@@ -63,4 +59,5 @@ $currentPage = isset($_GET['page']) && array_key_exists($_GET['page'], $pages)
     <?php endif; ?>
 	</main>
 	<body>
+
 </html>
